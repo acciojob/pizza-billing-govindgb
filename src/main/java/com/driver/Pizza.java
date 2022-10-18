@@ -26,11 +26,13 @@ public class Pizza {
         this.take_away_price = 20;
         if(isVeg == true)
         {
+
             this.price = 300;
             this.extra_toppings_price = 70;
         }
         else
         {
+
             this.price = 400;
             this.extra_toppings_price = 120;
         }
@@ -75,6 +77,14 @@ public class Pizza {
 
         if(is_bill_generated == false)
         {
+            if(isVeg)
+            {
+                this.bill += "Base Price Of The Pizza: 300\n";
+            }
+            else
+            {
+                this.bill += "Base Price Of The Pizza: 400\n";
+            }
             if(is_cheese_added == true)
             {
                 this.bill += "Extra Cheese Price = " + this.extra_cheese_price + "\n";
